@@ -1,17 +1,16 @@
-# Team Number – Automatic Grammar Correction Using Deep Learning
+# DB9 – Grammar Correction Using Deep Learning BART Model
 
 ## Team Info
-- 22471A05XX — **Name** ([LinkedIn](https://linkedin.com/in/xxxxxxxxxx))  
+- 22471A05M2 — **Garnepudi Sagarbabu** ([LinkedIn](https://linkedin.com/in/xxxxxxxxxx))  
   *Work Done:* Dataset collection, preprocessing, and exploratory data analysis
 
-- 22471A05XX — **Name** ([LinkedIn](https://linkedin.com/in/xxxxxxxxxx))  
+- 22471A05N5 — **Nallamsetty Vinay** ([LinkedIn](https://linkedin.com/in/xxxxxxxxxx))  
   *Work Done:* Model architecture design and training
 
-- 22471A05XX — **Name** ([LinkedIn](https://linkedin.com/in/xxxxxxxxxx))  
+- 23475A0514 — **Pikkilli Vekatesh** ([LinkedIn](https://linkedin.com/in/xxxxxxxxxx))  
   *Work Done:* Model testing, evaluation, and error analysis
 
-- 22471A05XX — **Name** ([LinkedIn](https://linkedin.com/in/xxxxxxxxxx))  
-  *Work Done:* Documentation and deployment
+
 
 ---
 
