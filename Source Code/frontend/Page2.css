@@ -1,0 +1,89 @@
+/* --- Main Accordion Container --- */
+.faq-accordion {
+  width: 100%;
+  max-width: 800px; /* Make it a bit wider for questions */
+  margin: 2rem auto; /* Center it on the page */
+}
+
+/* --- Individual FAQ Item Card --- */
+.faq-item {
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  /* A subtle shadow to make it "pop" */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+  /* This is key for the animation */
+  overflow: hidden; 
+}
+
+/* --- The Question/Title Bar --- */
+.faq-title {
+  display: flex;
+  justify-content: space-between; /* Puts icon on the right */
+  align-items: center;
+  padding: 1.5rem;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+.faq-title:hover {
+  background-color: #f8f9fa; /* Light grey on hover */
+}
+
+/* --- The Question Text --- */
+.faq-title h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* --- The '+' and '–' Icon --- */
+.faq-title span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #007bff; /* Your theme blue */
+  transition: transform 0.3s ease-out; /* Smooth rotation */
+}
+
+/* --- The Answer/Content Box --- */
+.faq-content {
+  /* This is the magic: start with 0 height */
+  max-height: 0;
+  overflow: hidden;
+  color: #555;
+  line-height: 1.6;
+
+  /* Animated padding and height */
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.faq-content p {
+  margin: 0; /* Remove default paragraph margin */
+}
+
+/* --- THE "OPEN" STATE --- */
+
+/* This class gets added by React */
+.faq-content.show {
+  /* Animate to this height */
+  max-height: 300px; /* A large-enough value */
+  /* Animate in the padding */
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* This rotates the '+' icon when open */
+.faq-item.open .faq-title span {
+  transform: rotate(45deg);
+}
+
+/* Optional: Keep the title highlighted when open */
+.faq-item.open .faq-title {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}

@@ -1,0 +1,173 @@
+/* === General & Body (Request 1) === */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  /* Add your background image */
+  background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps image still on scroll */
+  height: 100vh;
+}
+
+/* === Form Styles (Request 2) === */
+/* This container is only used on Login/Signup pages */
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+  padding: 2rem;
+  background-color: #ffffff; /* This makes the login box white */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Added to center it on the page */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  box-sizing: border-box; 
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button[type='submit'], .logout-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button[type='submit']:hover, .logout-button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: #e63946;
+  background-color: #fbebed;
+  border: 1px solid #e63946;
+  padding: 0.75rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.form-link {
+  text-align: center;
+  margin-top: 1rem;
+  color: #555;
+}
+
+.form-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* === NEW Vertical Navbar Styles (For Sidebar) === */
+.navbar {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  height: 100%;
+  background-color: #333; /* Moved from MainLayout.css */
+  color: white;
+  padding-top: 2rem;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0 1rem 2rem 1rem;
+}
+
+.navbar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; /* Pushes logout button down */
+}
+
+.navbar-links li {
+  /* No styles needed here anymore */
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  padding: 1.2rem 2rem;
+  /* This is for Request 3 */
+  transition: transform 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+/* === Request 3: Hover Effect === */
+.navbar-links a:hover {
+  background-color: #4a4a4a;
+  color: #007bff;
+  transform: translateX(10px); /* "Come forward" effect */
+}
+
+/* --- THIS IS THE NEW CODE --- */
+
+.logout-button {
+  width: 60%; /* <-- 1. Reduced length */
+  margin: 2rem auto; 
+  background-color: #00b300; /* <-- 2. Changed to green */
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem;
+  cursor: pointer;
+  /* 3. Added shadow and transition */
+  box-shadow: 0 0 8px rgba(0, 179, 0, 0.7);
+  transition: all 0.3s ease; 
+}
+
+.logout-button:hover {
+  background-color: #00cc00; /* <-- 4. Brighter green on hover */
+  /* 5. Made the glow effect stronger */
+  box-shadow: 0 0 15px rgba(0, 204, 0, 1);
+  transform: scale(1.02); /* Adds a slight "pop" effect */
+}
+
+/* === Page Content (for new layout) === */
+.page-content {
+  padding: 2rem;
+  text-align: left;
+}
+
+.page-content h1 {
+  margin-top: 0;
+}

@@ -1,0 +1,30 @@
+/* This creates the 40% / 60% split */
+.layout-container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  overflow: hidden; /* Prevents double scrollbars */
+}
+
+/* Request 4: The 40% Sidebar */
+.sidebar-area {
+  flex-basis: 40%;
+  max-width: 400px; /* Let's add a max-width so it's not huge */
+  min-width: 280px; /* And a min-width */
+  height: 100vh;
+  /* Background color is now in index.css on .navbar */
+}
+
+/* Request 5: The 60% Content Area */
+.content-area {
+  flex-basis: 60%;
+  flex-grow: 1; /* Takes up the remaining space */
+  height: 100vh;
+  overflow-y: auto; /* Lets the content scroll, not the page */
+  
+  /* This gives a nice "page" feel on the background */
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
